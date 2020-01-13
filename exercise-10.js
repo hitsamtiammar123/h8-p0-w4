@@ -1,13 +1,13 @@
 function changeMe(arr) {
     // you can only write your code here!
-    
+    var fullYear=new Date().getFullYear();
     for(var i=0;i<arr.length;i++){
         var obj={};
         var curr=arr[i];
         obj.firstName=curr[0];
         obj.lastName=curr[1];
         obj.gender=curr[2];
-        obj.age=curr[3]?new Date().getFullYear()-curr[3]:'Invalid Birth Date';
+        obj.age=curr[3]?fullYear-curr[3]:'Invalid Birth Date';
 
         var name=obj.firstName+' '+obj.lastName;
         console.log((i+1)+'. '+name);
