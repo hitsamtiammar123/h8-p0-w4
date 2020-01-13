@@ -1,6 +1,23 @@
+function unique(arr){
+    var newArr=[];
+    for(var i=0;i<arr.length;i++){
+        var temp=arr[i];
+        var counter=0;
+        for(var j=0;j!==i;j++){
+            var temp2=arr[j];
+            if(temp===temp2)
+                counter++;
+        }
+        
+        if(counter===0)
+            newArr.push(temp);
+    }
+    return newArr;
+}
+
 function cariModus(arr) {
     // you can only write your code here!
-    var set_arr=Array.from(new Set(arr));
+    var set_arr=unique(arr);
     if(set_arr.length===1 || set_arr.length===arr.length )
         return -1;
     else{
