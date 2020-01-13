@@ -14,7 +14,7 @@ function digitPerkalianMinimum(angka) {
                 c2=angka / c1;
                 dump.push(c2);
                 list.push([c1,c2]);
-                console.log(list);
+                //console.log(list);
                 if(c2.toString().length===1 && c1.toString().length===1 )
                     minDig++; 
             }
