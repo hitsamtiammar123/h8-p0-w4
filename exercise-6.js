@@ -1,6 +1,6 @@
 function digitPerkalianMinimum(angka) {
     // you can only write your code here!
-    var minDig=0;
+    var minDig;
     var dump=[];
     var c1=1;
     var c2=1;
@@ -14,11 +14,17 @@ function digitPerkalianMinimum(angka) {
                 c2=angka / c1;
                 dump.push(c2);
                 list.push([c1,c2]);
-                //console.log(list);
-                if(c2.toString().length===1 && c1.toString().length===1 )
-                    minDig++; 
             }
             c1++;
+        }
+
+        minDig=list[0][0].toString().length+list[0][1].toString().length;
+        for(var i=1;i<list.length;i++){
+            var l=list[i];
+            var temp1=l[0].toString();
+            var temp2=l[1].toString();
+            if(temp1.length+temp2.length<minDig)
+                minDig=temp1.length+temp2.length;
         }
     }
 
