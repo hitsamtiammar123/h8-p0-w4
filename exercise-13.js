@@ -1,5 +1,9 @@
 function deepSum (arr) {
     // Code disini
+
+    if(arr.length===0)
+      return 'No Number';
+
     var total=0;
 
     for(var i=0;i<arr.length;i++){
